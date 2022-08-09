@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///db5?serverTimezone=UTC
+    username: root
+    password: 1234
+  application:
+    name: oa
+server:
+  port: 8080
+  servlet:
+    context-path: /
+logging:
+  level:
+    com.example.oa: debug
+debug: true
+
+oa:
+  empphoto: C:\Users\Administrator\Pictures\empPhoto
+jwt:
+  secret: 976eff9c06594ac89e52bf86b49ec4f1
+  expireSeconds: 600
