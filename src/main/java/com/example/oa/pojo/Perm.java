@@ -2,6 +2,8 @@ package com.example.oa.pojo;
 
 import lombok.*;
 
+import java.util.List;
+
 @Setter //set
 @Getter //get
 @ToString // toString
@@ -14,4 +16,5 @@ public class Perm {
     private Integer pPerm; //父权限id
     private String url; // 资源路径
     private String state; //状态
+    private List<Perm> subPerm; // 子菜单集合
 }

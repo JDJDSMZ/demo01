@@ -35,6 +35,7 @@ public class UserController {
     @PostMapping(value="/add")
     public ResponseEntity<String> add(@RequestBody User user){
         //调用service层
+        System.out.println(user);
         userService.addUser(user);
         return new ResponseEntity<>("200", "增加用户"+user.getUsername()+"成功");
     }

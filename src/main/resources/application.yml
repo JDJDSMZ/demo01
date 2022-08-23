@@ -10,6 +10,10 @@ server:
   port: 8080
   servlet:
     context-path: /
+    tomcat:
+      # -1 表示不限制请求大小
+      # 单位是字节 byte
+      max-http-form-post-size: -1
 logging:
   level:
     com.example.oa: debug

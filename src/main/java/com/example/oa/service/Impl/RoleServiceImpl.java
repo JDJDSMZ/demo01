@@ -110,8 +110,12 @@ public class RoleServiceImpl implements RoleService {
 
     //根据id删除角色
     @Override
-    public void deleteRole(int id) {
-        roleMapper.deleteRole(id);
+    public void deleteRole(int roleId) {
+        //将角色状态改为'd'
+        roleMapper.deleteRole(roleId);
+        //清空所有角色管理的菜单和权限
+        rolePermMapper.updateRolePerm(roleId);
+        roleMenuMapper.updateRoleMenu(roleId);
     }
 
     //根据用户id查找所有用户的菜单 和权限

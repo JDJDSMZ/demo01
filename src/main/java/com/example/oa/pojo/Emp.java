@@ -25,4 +25,5 @@ public class Emp {
     private BigDecimal salary; //月薪
     @TableField(value = "dept_id", property = "dept.id") // 指定列的对应关系
     private Dept dept; //部门
+    private Integer nop;
 }

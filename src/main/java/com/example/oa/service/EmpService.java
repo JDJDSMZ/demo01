@@ -11,4 +11,7 @@ public interface EmpService extends IService<Emp> {
 
     //查询所有员工
     public List<Emp> findByAllEmp();
+
+    //根据id获取部门性别人数
+    List<Emp> listGp(int dId);
 }

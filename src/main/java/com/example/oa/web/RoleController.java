@@ -69,14 +69,11 @@ public class RoleController {
 
     //将数据转发到角色修改页面
     @GetMapping(value="/role_change")
-    public String role_change(Model model, int id){
+    public ResponseEntity<Role> role_change(int id){
         //获取角色id,并将菜单和权限传回去
-        Role role = roleService.findRoleMenuPerm(id);
+        Role r = roleService.findRoleMenuPerm(id);
 
-        //
-        model.addAttribute("role", role);
-
-        return "role_change";
+        return new ResponseEntity<>("200", "获取角色成功", r);
     }
 
     //修改角色信息

@@ -26,4 +26,11 @@ public class EmpServiceImpl extends ServiceImpl<EmpMapper, Emp> implements EmpSe
     public List<Emp> findByAllEmp() {
         return empMapper.findByAllEmp();
     }
+
+    //根据id获取部门性别人数
+    @Override
+    public List<Emp> listGp(int dId) {
+        List<Emp> emps = empMapper.listGp(dId);
+        return emps;
+    }
 }
